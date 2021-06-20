@@ -1,0 +1,5 @@
+#Ignore virtual env
+ml
+
+#Ignore the dataset
+caltech 101
