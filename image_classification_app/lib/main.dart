@@ -4,6 +4,7 @@ import 'package:tflite/tflite.dart';
 import 'dart:async';
 
 import 'package:camera/camera.dart';
+import 'package:flutter/services.dart';
 
 Future<void> main() async {
   // Initialize plugins for camera
@@ -120,6 +121,10 @@ class TakePictureScreenState extends State<TakePictureScreen> {
   //____________________________________________________
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       appBar: AppBar(title: const Text('Image Classifier')),
       // Wait till controller has initialized and then show preview
